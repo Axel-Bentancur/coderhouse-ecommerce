@@ -1,4 +1,4 @@
-import ItemCardWidget from "./itemCardWidget";
+import ItemCardWidget from "./ItemCardWidget";
 
 enum Target {
   list,
