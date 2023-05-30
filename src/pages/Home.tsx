@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import Landing from '../assets/lading.png'
 
-const title = 'QUIET HANDMADE CERAMICS AND POTERY'
+const title = 'QUIET HANDMADE CERAMICS AND POTTERY'
 
 export default function Home(): JSX.Element {
   return (

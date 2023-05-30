@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
-import { CartItemsInIcon } from '../utilities/Utilities';
+import { CartItemsInIcon } from '../../utilities/Utilities';
 
 enum Target {
   list,
