@@ -3,6 +3,7 @@ import Plates from '../../assets/plates.jpg';
 import Jar from '../../assets/jar.jpg';
 import D_cup from '../../assets/double_cup.jpg';
 import Pot from '../../assets/pot.jpg';
+import A_plate from '../../assets/apple_plate.jpg';
 import './CardsContainer.scss';
 
 const list = [
@@ -23,6 +24,10 @@ const list = [
     title: 'Serving Kintsugi bolws',
     price: '$ 64.50',
     image: Pot,
+  },{
+    title: 'Wedding Ring Holder',
+    price: '$ 72.50',
+    image: A_plate,
   }
 ]
 
