@@ -4,6 +4,7 @@ import useDrawer from '../../hooks/useDrawer';
 import Drawer from '../drawer/Drawer';
 import BurguerButton from './BurguerButton';
 import CartWidget from './CartWidget';
+import Logo from '../Logo';
 
 interface Props {
   navLinks: {
@@ -30,8 +31,8 @@ export default function NavBar (props:Props):JSX.Element {
   return (
     <header className='px-0'>
       <nav className="flex items-center justify-between bg-white px-8 py-4 lg:px-20 xl:px-40 shadow-lg">
-        <Link to='/' className="inline-block font-bold text-2xl tracking-wider brand">
-        quietform.
+        <Link to='/' >
+          <Logo>quietform.</Logo>
         </Link>
         <div className='flex items-center'>
         {navLinks.map((e, idx) => (
