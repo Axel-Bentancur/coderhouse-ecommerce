@@ -1,29 +1,21 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import IconsButton from '../buttons/IconsButton';
 
-enum Target {
-  list,
-  cart
-}
+import { ITargetWidget } from '../../interfaces/ITargetWidget';
 
-interface Status {
-  isOpen: boolean,
-  setIsOpen: (el: Target) => void,
-}
-
-export default function BurguerButton(props:Status) {
-  const { isOpen, setIsOpen } = props;
+export default function BurguerButton({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (el: ITargetWidget) => void }) {
 
   return (
     <>
     {isOpen ?
-      <button onClick={() => setIsOpen(Target.list)} className="px-3 py-1 rounded text-gray-800 lg:hidden">
+      <IconsButton setIsOpen={setIsOpen} element='list' additionClass='pr-3 lg:hidden'>
         <FontAwesomeIcon icon={faXmark} size="xl"/>
-      </button>
-    :
-      <button onClick={() => setIsOpen(Target.list)} className="px-3 py-1 rounded text-gray-800 lg:hidden">
+      </IconsButton>
+      :
+      <IconsButton setIsOpen={setIsOpen} element='list' additionClass='pr-3 lg:hidden'>
         <FontAwesomeIcon icon={faBars} size="xl"/>
-      </button>
+      </IconsButton>
     }
     </>
   )

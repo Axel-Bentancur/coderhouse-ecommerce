@@ -1,15 +1,7 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { INavLinks } from "../../interfaces/INavLinks";
 
-interface Props {
-  itemList:
-    {
-      title: string,
-      path: string,
-    }[]
-}
-
-export default function List(props: Props) {
-  const { itemList } = props;
+export default function List({itemList}:{itemList:INavLinks[]}) {
 
   return (
     <div className='flex flex-col'>

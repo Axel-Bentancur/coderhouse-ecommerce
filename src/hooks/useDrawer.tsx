@@ -1,17 +1,14 @@
 import { useState } from "react";
+
 import useToggle from "./useToggle";
 
-enum Target {
-  list,
-  cart,
-  empty
-}
+import { ITargetWidget } from "../interfaces/ITargetWidget";
 
-const useDrawer = () : [boolean, Target, (el: Target) => void] => {
+const useDrawer = () : [boolean, ITargetWidget, (el: ITargetWidget) => void] => {
   const [toggle, setToggle] = useToggle();
-  const [component, setComponent] = useState<Target>(Target.empty);
+  const [component, setComponent] = useState<ITargetWidget>("empty");
 
-  const setDrawer = (el: Target) :void => {
+  const setDrawer = (el: ITargetWidget) :void => {
     setToggle();
     setComponent(el);
   }

@@ -4,61 +4,26 @@ import List from "./List";
 import SocialMedia from "./SocialMedia";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faFacebook  } from '@fortawesome/free-brands-svg-icons';
-
-const itemList1 = [
-  {
-    title: 'Shop',
-    path: '/shop'
-  }
-]
-const itemList2 = [
-  {
-    title: 'Category',
-    path: '/'
-  },
-]
-const itemList3 = [
-  {
-    title: 'Contacts',
-    path: '/contacts'
-  },
-]
-const itemList4 = [
-  {
-    title: 'About',
-    path: '/about'
-  },
-]
-const itemList5 = [
-  {
-    title: 'Blog',
-    path: '/'
-  },
-]
-const itemList6 = [
-  {
-    title: 'Support',
-    path: '/'
-  }
-]
+import NavbarContainer from "../navbar/NavbarContainer";
+import { Footer_List_1, Footer_List_2, Footer_List_3, Footer_List_4, Footer_List_5, Footer_List_6 } from "../../utilities/Data";
 
 export default function Footer() {
   return (
-    <div className="min-h-[10vh] px-8 py-4 lg:px-20 xl:px-40 divide-y divide-gray-500">
-      <FooterSection sm_cols={2} md_cols={3} >
+    <NavbarContainer additionClass={'divide-y divide-gray-500'}>
+      <FooterSection additionClass={'grid grid-cols-2 md:grid-cols-3'} >
         <div className="flex flex-col md:grid md:grid-cols-3 gap-1 justify-between w-full justify-items-center items-center">
-          <List itemList={itemList1}/>
-          <List itemList={itemList2}/>
-          <List itemList={itemList3}/>
+          <List itemList={Footer_List_1}/>
+          <List itemList={Footer_List_2}/>
+          <List itemList={Footer_List_3}/>
         </div>
         <Logo>quietform.</Logo>
         <div className="flex flex-col md:grid md:grid-cols-3 gap-1 justify-between w-full justify-items-center items-center">
-          <List itemList={itemList4}/>
-          <List itemList={itemList5}/>
-          <List itemList={itemList6}/>
+          <List itemList={Footer_List_4}/>
+          <List itemList={Footer_List_5}/>
+          <List itemList={Footer_List_6}/>
         </div>
       </FooterSection>
-      <FooterSection sm_cols={1} md_cols={1}>
+      <FooterSection additionClass={'grid grid-cols-1 md:grid-cols-1'}>
           <div>
           <SocialMedia path='https://twitter.com/'>
             <FontAwesomeIcon icon={faTwitter}  size="xl"/>
@@ -71,6 +36,6 @@ export default function Footer() {
           </SocialMedia>
           </div>
       </FooterSection>
-    </div>
+    </NavbarContainer>
   )
 }

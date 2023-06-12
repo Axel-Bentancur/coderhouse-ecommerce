@@ -1,17 +1,12 @@
-interface Props {
-  item: {
-    image: string,
-    title: string,
-    price: number,
-    quantity: number,
-  }
-}
+import { ToCurrency } from "../../utilities/Utilities";
+import { IProducts } from "../../interfaces/IProducts";
 
-export default function ItemCardWidget(props: Props): JSX.Element {
-  const {image, title, price} = props.item;
+export default function ItemCardWidget({item}: {item:IProducts}): JSX.Element {
+  const {image, title, price} = item;
+  const formatedPrice = ToCurrency(price, 'ARSPESO');
 
   return (
-    <li className="flex py-6">
+    <li className="flex p-4">
       <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
         <img src={image} alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." className="h-full w-full object-cover object-center" />
       </div>
@@ -22,7 +17,7 @@ export default function ItemCardWidget(props: Props): JSX.Element {
             <h3>
               <a href="#">{title}</a>
             </h3>
-            <p className="ml-4">{price}</p>
+            <p className="ml-4">{formatedPrice}</p>
           </div>
         </div>
         <div className="flex flex-1 items-end justify-between text-sm">

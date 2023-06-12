@@ -1,11 +1,14 @@
 
+import { IProducts } from '../interfaces/IProducts';
+
 import Plates from '../assets/plates.jpg';
 import Jar from '../assets/jar.jpg';
 import D_cup from '../assets/double_cup.jpg';
 import Pot from '../assets/pot.jpg';
 import A_plate from '../assets/apple_plate.jpg';
+import { INavLinks } from '../interfaces/INavLinks';
 
-export const Data = [
+export const Product_List: Array<IProducts> = [
   {
     image: Plates,
     title: 'Serving pottery bowls',
@@ -39,27 +42,60 @@ export const Data = [
   },
 ]
 
-export const navLinks = [
+export const Nav_Links : Array<INavLinks> = [
   {
     title: 'Shop online',
     path: '/shop',
-    show: true
   },
   {
     title: 'About',
     path: '/about',
-    show: true
   },
   {
     title: 'Contacts',
     path: '/contact',
-    show: true
   },
   {
     title: 'Cart',
     path: '/cart',
-    show: false
   },
+]
+
+export const Footer_List_1 : Array<INavLinks> = [
+  {
+    title: 'Shop',
+    path: '/shop'
+  }
+]
+export const Footer_List_2 : Array<INavLinks> = [
+  {
+    title: 'Category',
+    path: '/'
+  },
+]
+export const Footer_List_3 : Array<INavLinks> = [
+  {
+    title: 'Contacts',
+    path: '/contacts'
+  },
+]
+export const Footer_List_4 : Array<INavLinks> = [
+  {
+    title: 'About',
+    path: '/about'
+  },
+]
+export const Footer_List_5 : Array<INavLinks> = [
+  {
+    title: 'Blog',
+    path: '/'
+  },
+]
+export const Footer_List_6 : Array<INavLinks> = [
+  {
+    title: 'Support',
+    path: '/'
+  }
 ]
 
 export const tabsData = [
@@ -79,3 +115,5 @@ export const tabsData = [
       'For shipping, we offer standard and express delivery. We will process your order within 24 hours and provide you with a tracking number. In the event of a return, please contact us within 14 days of receiving the product. We will provide detailed instructions for returning it in its original packaging. Once received, we will inspect the product and issue a refund within 7 business days. We strive to provide you with efficient shipping service and a hassle-free return process.',
   },
 ];
+
+export const data_url = 'https://jsonplaceholder.typicode.com/todos';

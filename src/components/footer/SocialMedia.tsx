@@ -1,11 +1,7 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { WithChildren } from "../../interfaces/Icontainer";
 
-interface Props {
-  children: React.ReactNode,
-  path: string
-}
-
-export default function SocialMedia({children, path}:Props) {
+export default function SocialMedia({children, path} : { children: React.ReactElement<WithChildren>; path: string }) {
   return (
     <>
      <Link to={path} target="_blank" rel="noopener noreferrer" className="m-2">

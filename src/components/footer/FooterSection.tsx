@@ -1,12 +1,8 @@
-interface Props {
-  children: React.ReactNode,
-  sm_cols: number,
-  md_cols: number
-}
+import { WithChildren } from "../../interfaces/Icontainer"
 
-export default function FooterSection({children, sm_cols, md_cols}:Props) {
+export default function FooterSection({children, additionClass}:WithChildren) {
   return (
-    <div className={`grid grid-cols-${sm_cols} md:grid-cols-${md_cols} gap-1 justify-items-center items-start justify-center py-4`}>
+    <div className={`gap-1 justify-items-center items-start justify-center py-4 ${additionClass}`}>
       {children}
     </div>
   )

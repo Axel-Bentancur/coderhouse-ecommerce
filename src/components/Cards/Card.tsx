@@ -1,3 +1,4 @@
+import { ToCurrency } from '../../utilities/Utilities';
 import './Card.scss';
 
 interface Props {
@@ -10,6 +11,7 @@ interface Props {
 
 export default function Card(props: Props) {
   const {title, price, image} = props.product;
+  const formatedPrice = ToCurrency(price, 'ARSPESO');
 
   return (
   <div className="col-span-1 flex flex-col">
@@ -21,7 +23,7 @@ export default function Card(props: Props) {
       <button className='p-2 text-xl'>+</button>
     </div>
     <div className="flex flex-wrap mt-auto pt-3 text-xs border-b-2 border-gray-300">
-      <p className="mb-2">{price}</p>
+      <p className="mb-2">{formatedPrice}</p>
     </div>
   </div>
   )
