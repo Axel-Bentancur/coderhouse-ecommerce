@@ -1,13 +1,14 @@
+//Components
+import IconsButton from '../buttons/IconsButton';
+//Types
+import { ITargetWidget } from '../../interfaces/ITargetWidget';
+//Others
+import { CartItemsInIcon } from '../../utilities/Utilities';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
-import { CartItemsInIcon } from '../../utilities/Utilities';
-import IconsButton from '../buttons/IconsButton';
-
-import { ITargetWidget } from '../../interfaces/ITargetWidget';
 
 export default function CartWidget({ quantity, setIsOpen }: { quantity: number; setIsOpen: (el: ITargetWidget) => void }) {
   const items = CartItemsInIcon(quantity);
-
   return (
     <IconsButton setIsOpen={setIsOpen} element='cart' additionClass='plr-3'>
       <FontAwesomeIcon icon={faBagShopping} size="xl"/>

@@ -1,8 +1,8 @@
 import { useState } from "react";
-
-import useToggle from "./useToggle";
-
+//Types
 import { ITargetWidget } from "../interfaces/ITargetWidget";
+//Others
+import useToggle from "./useToggle";
 
 const useDrawer = () : [boolean, ITargetWidget, (el: ITargetWidget) => void] => {
   const [toggle, setToggle] = useToggle();

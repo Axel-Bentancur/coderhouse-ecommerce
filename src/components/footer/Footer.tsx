@@ -1,11 +1,14 @@
-import Logo from "../Logo";
+//Components
 import FooterSection from "./FooterSection";
 import List from "./List";
+import Logo from "../Logo";
 import SocialMedia from "./SocialMedia";
+import NavbarContainer from "../navbar/NavbarContainer";
+//Data
+import { Footer_List_1, Footer_List_2, Footer_List_3, Footer_List_4, Footer_List_5, Footer_List_6 } from "../../utilities/staticData";
+//Others
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faFacebook  } from '@fortawesome/free-brands-svg-icons';
-import NavbarContainer from "../navbar/NavbarContainer";
-import { Footer_List_1, Footer_List_2, Footer_List_3, Footer_List_4, Footer_List_5, Footer_List_6 } from "../../utilities/Data";
 
 export default function Footer() {
   return (

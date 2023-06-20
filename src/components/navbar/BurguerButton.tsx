@@ -1,11 +1,12 @@
+//Components
+import IconsButton from '../buttons/IconsButton';
+//Types
+import { ITargetWidget } from '../../interfaces/ITargetWidget';
+//Others
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-import IconsButton from '../buttons/IconsButton';
-
-import { ITargetWidget } from '../../interfaces/ITargetWidget';
 
 export default function BurguerButton({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (el: ITargetWidget) => void }) {
-
   return (
     <>
     {isOpen ?

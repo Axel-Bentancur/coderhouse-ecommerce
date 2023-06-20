@@ -1,8 +1,10 @@
+//Components
+import IconsButton from './IconsButton';
+//Types
+import { ITargetWidget } from '../../interfaces/ITargetWidget';
+//Others
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import IconsButton from './IconsButton';
-import { ITargetWidget } from '../../interfaces/ITargetWidget';
-
 
 export default function CloseButton({ setIsOpen, element, title}: { setIsOpen: (el: ITargetWidget) => void; element: ITargetWidget; title: string | null}) {
 

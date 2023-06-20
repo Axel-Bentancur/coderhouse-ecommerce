@@ -1,4 +1,5 @@
-import about from '../assets/about-3.png'
+//Others
+import about from '../assets/about.png'
 
 export default function About(): JSX.Element {
   return (

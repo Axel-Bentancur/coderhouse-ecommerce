@@ -1,15 +1,12 @@
 import { Link } from 'react-router-dom';
-
-import useDrawer from '../../hooks/useDrawer';
-
-import Drawer from '../drawer/Drawer';
-import BurguerButton from './BurguerButton';
-import CartWidget from './CartWidget';
+//Components
 import NavbarContainer from './NavbarContainer';
-
-import { Nav_Links } from "../../utilities/Data";
-import { Product_List } from "../../utilities/Data";
-
+import BurguerButton from './BurguerButton';
+import Drawer from '../drawer/Drawer';
+import CartWidget from './CartWidget';
+//Others
+import useDrawer from '../../hooks/useDrawer';
+import { Nav_Links } from "../../utilities/staticData";
 import Logo from '../Logo';
 import './NavBar.scss';
 
@@ -34,7 +31,7 @@ export default function NavBar ():JSX.Element {
           <BurguerButton isOpen={toggle} setIsOpen={setDrawer}/>
         </div>
       </NavbarContainer>
-      <Drawer isOpen={toggle} setIsOpen={setDrawer} navLinks={Nav_Links} element={element} Product_List={Product_List}/>
+      <Drawer isOpen={toggle} setIsOpen={setDrawer} element={element}/>
     </header>
   )
 }

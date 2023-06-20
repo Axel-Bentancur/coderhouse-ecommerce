@@ -1,3 +1,4 @@
+//Types
 import { WithChildren } from "../../interfaces/Icontainer"
 
 export default function FooterSection({children, additionClass}:WithChildren) {

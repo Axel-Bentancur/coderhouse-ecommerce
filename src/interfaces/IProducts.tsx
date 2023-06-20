@@ -1,7 +1,12 @@
 export type IProducts = {
-  image: string,
+  id: number,
   title: string,
   description: string,
   price: number,
-  quantity: number,
+  rating: number,
+  stock: number,
+  category: string,
+  thumbnail: string,
+  colors: string[]
+  images: string[]
 }

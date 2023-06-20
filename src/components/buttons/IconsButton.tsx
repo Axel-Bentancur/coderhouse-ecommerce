@@ -1,3 +1,4 @@
+//Types
 import { IWidget } from "../../interfaces/IWidget";
 import { WithChildren } from "../../interfaces/Icontainer";
 

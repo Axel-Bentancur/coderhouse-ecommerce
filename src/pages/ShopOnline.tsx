@@ -1,4 +1,5 @@
-import CardsContainer from "../components/Cards/CardsContainer";
+//Components
+import CardsContainer from "../components/cards/CardsContainer";
 
 export default function ShopOnline(): JSX.Element {
   return (

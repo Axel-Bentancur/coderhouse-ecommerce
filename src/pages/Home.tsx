@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+//Others
 import Landing from '../assets/lading.png'
 
 const title = 'QUIET HANDMADE CERAMICS AND POTTERY'

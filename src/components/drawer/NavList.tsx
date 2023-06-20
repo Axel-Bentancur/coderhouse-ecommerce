@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
+//Components
 import NavbarContainer from "../navbar/NavbarContainer";
 import CloseButton from "../buttons/CloseButton";
+//Data
+import { Nav_Links } from "../../utilities/staticData";
+//Types
 import { ITargetWidget } from "../../interfaces/ITargetWidget";
-import { INavLinks } from "../../interfaces/INavLinks";
 
-export default function NavList({ setIsOpen, navLinks, element}: { setIsOpen: (el: ITargetWidget) => void; navLinks: INavLinks[]; element: ITargetWidget}): JSX.Element {
+
+export default function NavList({ setIsOpen, element}: { setIsOpen: (el: ITargetWidget) => void; element: ITargetWidget}): JSX.Element {
 
   return (
     <>
@@ -12,7 +16,7 @@ export default function NavList({ setIsOpen, navLinks, element}: { setIsOpen: (e
         <CloseButton setIsOpen={setIsOpen} element={element} title={null}/>
       </NavbarContainer>
       <div className="px-4">
-        {navLinks.map((el, idx) => (
+        {Nav_Links.map((el, idx) => (
           <Link key={idx} to={el.path} onClick={() => setIsOpen(element)} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
             <span>
               {el.title}
