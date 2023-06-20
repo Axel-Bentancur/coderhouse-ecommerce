@@ -27,33 +27,21 @@ export const Footer_List_1 : Array<INavLinks> = [
 ]
 export const Footer_List_2 : Array<INavLinks> = [
   {
-    title: 'Category',
-    path: '#'
-  },
-]
-export const Footer_List_3 : Array<INavLinks> = [
-  {
     title: 'Contacts',
     path: '/Contact'
   },
 ]
-export const Footer_List_4 : Array<INavLinks> = [
+export const Footer_List_3 : Array<INavLinks> = [
   {
     title: 'About',
     path: '/about'
   },
 ]
-export const Footer_List_5 : Array<INavLinks> = [
+export const Footer_List_4 : Array<INavLinks> = [
   {
     title: 'Blog',
     path: '#'
   },
-]
-export const Footer_List_6 : Array<INavLinks> = [
-  {
-    title: 'Support',
-    path: '#'
-  }
 ]
 
 export const tabsData = [
