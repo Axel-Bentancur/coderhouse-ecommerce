@@ -1,4 +1,3 @@
-import { ICartProduct } from "../interfaces/ICart";
 import { IProducts } from "../interfaces/IProducts";
 
 export function CartItemsInIcon(quantity:number): string | null {
@@ -38,12 +37,15 @@ const ARSPeso = new Intl.NumberFormat('es-AR', {
   }
 }
 
-export function Subtotal(items: ICartProduct[]): string {
-  const total = items.reduce((accumulator, currentObject) => {
-    return accumulator + currentObject.price;
-  }, 0);
-  const formatedPrice = ToCurrency(total, 'ARSPESO');
-  return formatedPrice;
+export function Subtotal(items: IProducts[] | undefined): string {
+  if(items){
+    const total = items.reduce((accumulator, currentObject) => {
+      return accumulator + currentObject.price;
+    }, 0);
+    const formatedPrice = ToCurrency(total, 'ARSPESO');
+    return formatedPrice;
+  }
+  return 'No Items'
 }
 
 export function getProductByIdAndCategory(category: string | undefined, title: string | undefined, list: IProducts[]): IProducts | undefined {
@@ -52,7 +54,7 @@ export function getProductByIdAndCategory(category: string | undefined, title: s
 }
 
 export function getProductByCategory(category: string | undefined, list: IProducts[]): IProducts[] | undefined {
-  if(category !== 'shop'){
+  if(category !== 'Shop'){
     const product = list.filter((item: IProducts) => item.category === category);
     return product;
   }else{

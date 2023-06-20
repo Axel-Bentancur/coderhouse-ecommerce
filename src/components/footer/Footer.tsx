@@ -12,7 +12,7 @@ import { faInstagram, faTwitter, faFacebook  } from '@fortawesome/free-brands-sv
 
 export default function Footer() {
   return (
-    <NavbarContainer additionClass={'divide-y divide-gray-500'}>
+    <NavbarContainer additionClass={'divide-y divide-gray-500 min-h-[8vh]'}>
       <FooterSection additionClass={'grid grid-cols-2 md:grid-cols-3'} >
         <div className="flex flex-col md:grid md:grid-cols-3 gap-1 justify-between w-full justify-items-center items-center">
           <List itemList={Footer_List_1}/>

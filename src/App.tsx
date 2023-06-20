@@ -18,12 +18,12 @@ export default function App(): JSX.Element {
       <Breadcrumbs />
         <Routes>
           <Route path='/' element={<Home />}/>
-          <Route path='/shop' element={<ShopOnline />}/>
-          <Route path='/shop/:category' element={<ShopOnline />}/>
-          <Route path='/about' element={<About />}/>
-          <Route path='/contact' element={<Contacts />}/>
-          <Route path='/cart' element={<Cart />}/>
-          <Route path='/shop/:category/:title' element={<Product />}/>
+          <Route path='/Shop' element={<ShopOnline />}/>
+          <Route path='/Shop/:category' element={<ShopOnline />}/>
+          <Route path='/About' element={<About />}/>
+          <Route path='/Contact' element={<Contacts />}/>
+          <Route path='/Cart' element={<Cart />}/>
+          <Route path='/Shop/:category/:title' element={<Product />}/>
         </Routes>
       <Footer />
     </div>

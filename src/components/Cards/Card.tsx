@@ -9,7 +9,7 @@ export default function Card({item, lastElement}: {item:IProducts, lastElement:s
   const formatedPrice = ToCurrency(price, 'ARSPESO');
 
   return (
-    <Link to={lastElement !== 'shop' ? `${title}` : `${category}/${title}`}>
+    <Link to={lastElement !== 'Shop' ? `${title}` : `${category}/${title}`}>
       <div className="col-span-1 flex flex-col h-full">
         <img src={thumbnail} alt="bowl" className='mb-6'/>
         <div className='flex flex-row justify-between md:border-t-2 border-gray-300'>

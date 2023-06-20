@@ -5,7 +5,8 @@ import Card from "./Card";
 import Loader from "../Loader";
 import CardCategory from "./CardCategory";
 //Data
-import { ProductContext } from "../../context/ProductContext copy";
+import { ProductContext } from "../../context/ProductContext";
+//Others
 import { getProductByCategory } from "../../utilities/Utilities";
 
 

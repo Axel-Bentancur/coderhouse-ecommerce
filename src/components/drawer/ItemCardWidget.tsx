@@ -1,11 +1,15 @@
 //Types
-import { ICartProduct } from "../../interfaces/ICart";
+import { IProductWithQuantity } from "../../interfaces/IProducts";
 //Others
 import { ToCurrency } from "../../utilities/Utilities";
 
-export default function ItemCardWidget({item}: {item:ICartProduct}): JSX.Element {
-  const {title, price, quantity, thumbnail, color} = item;
+export default function ItemCardWidget({item, remove}: {item:IProductWithQuantity, remove:(productId: number) => void}): JSX.Element {
+  const {id, title, price, quantity, thumbnail, colors} = item;
   const formatedPrice = ToCurrency(price, 'ARSPESO');
+
+  const handleRemoveFromCart = () => {
+    remove(id);
+  };
 
   return (
     <li className="flex p-4">
@@ -24,11 +28,11 @@ export default function ItemCardWidget({item}: {item:ICartProduct}): JSX.Element
         </div>
         <div className="flex flex-1 items-end justify-between text-sm">
           <p className="text-gray-500 block">
-            <span className="block">Color: {color}</span>
+            <span className="block">Color: {colors}</span>
             <span className="block">Quantity: {quantity}</span>
           </p>
           <div className="flex">
-            <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+            <button onClick={handleRemoveFromCart} type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
           </div>
         </div>
       </div>

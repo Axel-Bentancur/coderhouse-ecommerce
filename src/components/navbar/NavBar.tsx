@@ -17,7 +17,7 @@ export default function NavBar ():JSX.Element {
 
   return (
     <header className='px-0'>
-      <NavbarContainer additionClass={'flex lg:px-20 xl:px-40'}>
+      <NavbarContainer additionClass={'flex lg:px-20 xl:px-40 min-h-[8vh]'}>
         <Link to='/' >
           <Logo>quietform.</Logo>
         </Link>

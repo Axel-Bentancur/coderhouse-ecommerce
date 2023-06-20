@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { ProductContext } from '../context/ProductContext copy';
+import { ProductContext } from '../context/ProductContext';
 //Components
 import Counter from '../components/Counter';
 import { Tabs } from '../components/Tabs';

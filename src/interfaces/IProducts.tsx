@@ -10,3 +10,14 @@ export type IProducts = {
   colors: string[]
   images: string[]
 }
+
+export type IProductWithQuantity = IProducts & {
+  quantity: number;
+};
+
+export type CartContextType = {
+  cart: IProductWithQuantity[],
+  addToCart: (product: IProductWithQuantity) => void,
+  removeFromCart: (productId: number) => void,
+  clearCart: () => void,
+};

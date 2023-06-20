@@ -1,5 +1,4 @@
-import { IProducts } from '../interfaces/IProducts';
-import { ICartProduct } from '../interfaces/ICart';
+import { IProducts, IProductWithQuantity } from '../interfaces/IProducts';
 
 import Plates from '../assets/plates.jpg';
 import Jar from '../assets/jar.jpg';
@@ -100,32 +99,62 @@ export const Product_List: Array<IProducts> = [
   }
 ]
 
-export const Cart_List: Array<ICartProduct> = [
+export const Cart_List: Array<IProductWithQuantity> = [
   {
     id: 1,
-    category: 'Plates',
     title: 'Serving pottery plate',
+    description: 'This handmade pottery bowl boasts a smooth, round shape that tapers slightly towards the rim. Expertly crafted, it features a rustic, textured exterior that showcases the natural variations in the clay. Perfect for serving a hearty soup or salad, this unique piece is both functional and beautiful, making it a must-have for any home.',
     price: 58,
-    quantity: 3,
+    rating: 4.69,
+    stock: 7,
+    category: 'Plates',
     thumbnail: Plates,
-    color:'Gray',
+    colors:['White', 'Gray', 'Black'],
+    images: [
+    "https://i.dummyjson.com/data/products/1/1.jpg",
+    "https://i.dummyjson.com/data/products/1/2.jpg",
+    "https://i.dummyjson.com/data/products/1/3.jpg",
+    "https://i.dummyjson.com/data/products/1/4.jpg",
+    "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+    ],
+    quantity: 2,
   },
   {
     id: 2,
-    category: 'Cups',
     title: 'Serving cup',
+    description: 'The ceramic plate is a beautiful piece of handcrafted art. It has a silky texture and features intricate floral designs in soft hues of blue and green. The plate is slightly curved, creating an elegant shape that adds dimension to any table setting. It is sturdy and durable, perfect for serving meals or displaying decorative items. The ceramic material allows for easy cleaning and makes it dishwasher and microwave safe. This plate is not only functional but also a stunning addition to any kitchen or dining room.',
     price: 45,
-    quantity: 3,
+    rating: 4.69,
+    stock: 1,
+    category: 'Cups',
     thumbnail: D_cup,
-    color:'White',
+    colors:['White', 'Gray', 'Black'],
+    images: [
+    "https://i.dummyjson.com/data/products/1/1.jpg",
+    "https://i.dummyjson.com/data/products/1/2.jpg",
+    "https://i.dummyjson.com/data/products/1/3.jpg",
+    "https://i.dummyjson.com/data/products/1/4.jpg",
+    "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+    ],
+    quantity: 3,
   },
   {
-    id: 5,
-    category: 'Plates',
-    title: 'Wedding Ring Holder',
-    price: 45,
+    id: 3,
+    title: 'Stoneware jar',
+    description: "The stoneware plate is a durable and versatile ceramic piece that is perfect for everyday use. Made from natural clay and fired at a high temperature, it is dense, strong, and chip-resistant, making it ideal for serving hot or cold food. Its earthy texture and subtle variations in tone give it a rustic yet elegant look that complements any table setting. The plate's glazed finish not only adds a protective layer but also enhances its natural beauty, making it a practical and stylish addition to your dinnerware collection.",
+    price: 48,
+    rating: 4.69,
+    stock: 15,
+    category: 'Cups',
+    thumbnail: Jar,
+    colors:['White', 'Gray', 'Black'],
+    images: [
+    "https://i.dummyjson.com/data/products/1/1.jpg",
+    "https://i.dummyjson.com/data/products/1/2.jpg",
+    "https://i.dummyjson.com/data/products/1/3.jpg",
+    "https://i.dummyjson.com/data/products/1/4.jpg",
+    "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+    ],
     quantity: 6,
-    thumbnail: A_plate,
-    color:'Black',
   }
 ]

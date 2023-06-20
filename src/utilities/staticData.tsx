@@ -3,38 +3,38 @@ import { INavLinks } from '../interfaces/INavLinks';
 export const Nav_Links : Array<INavLinks> = [
   {
     title: 'About',
-    path: '/about',
+    path: '/About',
   },
   {
     title: 'Shop online',
-    path: '/shop',
+    path: '/Shop',
   },
   {
     title: 'Contacts',
-    path: '/contact',
+    path: '/Contact',
   },
   {
     title: 'Cart',
-    path: '/cart',
+    path: '/Cart',
   },
 ]
 
 export const Footer_List_1 : Array<INavLinks> = [
   {
     title: 'Shop',
-    path: '/shop'
+    path: '/Shop'
   }
 ]
 export const Footer_List_2 : Array<INavLinks> = [
   {
     title: 'Category',
-    path: '/'
+    path: '#'
   },
 ]
 export const Footer_List_3 : Array<INavLinks> = [
   {
     title: 'Contacts',
-    path: '/contacts'
+    path: '/Contact'
   },
 ]
 export const Footer_List_4 : Array<INavLinks> = [
@@ -46,13 +46,13 @@ export const Footer_List_4 : Array<INavLinks> = [
 export const Footer_List_5 : Array<INavLinks> = [
   {
     title: 'Blog',
-    path: '/'
+    path: '#'
   },
 ]
 export const Footer_List_6 : Array<INavLinks> = [
   {
     title: 'Support',
-    path: '/'
+    path: '#'
   }
 ]
 

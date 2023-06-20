@@ -12,7 +12,7 @@ export default function NavList({ setIsOpen, element}: { setIsOpen: (el: ITarget
 
   return (
     <>
-      <NavbarContainer additionClass={'flex'}>
+      <NavbarContainer additionClass={'flex min-h-[8vh]'}>
         <CloseButton setIsOpen={setIsOpen} element={element} title={null}/>
       </NavbarContainer>
       <div className="px-4">

@@ -11,21 +11,21 @@ import { ITargetWidget } from "../../interfaces/ITargetWidget";
 //Others
 import { Subtotal } from "../../utilities/Utilities";
 
-export default function CartItemsWidget({ setIsOpen, element}: { setIsOpen: (el: ITargetWidget) => void; element: ITargetWidget}): JSX.Element {
+export default function CartItemsWidget({ setIsOpen, element}: {setIsOpen: (el: ITargetWidget) => void; element: ITargetWidget}): JSX.Element {
 
   const CartProduct = useContext(CartContext);
-  const total = Subtotal(CartProduct);
+  const total = Subtotal(CartProduct?.cart);
 
   return (
     <div className="flex h-full flex-col overflow-y-scroll bg-white">
       <div className="flex-1 overflow-y-auto">
-      <NavbarContainer additionClass={'flex'}>
+      <NavbarContainer additionClass={'flex min-h-[8vh]'}>
         <CloseButton setIsOpen={setIsOpen} element={element} title={'Shopping cart'}/>
       </NavbarContainer>
         <div className="px-4">
           <ul role="list" className="divide-y divide-gray-200">
-            {CartProduct.map((product, idx)=> (
-              <ItemCardWidget key={idx} item={product}/>
+            {CartProduct?.cart.map((product, idx)=> (
+              <ItemCardWidget key={idx} item={product} remove={CartProduct.removeFromCart} />
             ))}
           </ul>
         </div>
@@ -39,7 +39,7 @@ export default function CartItemsWidget({ setIsOpen, element}: { setIsOpen: (el:
           <a href="#" className="flex items-center justify-center rounded-md border border-transparent bg-purple-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-purple-700">Checkout</a>
         </div>
         <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
-          <Link to={'/shop'}>
+          <Link to={'/Shop'}>
             <button type="button" onClick={() => setIsOpen(element)} className="font-medium text-purple-600 hover:text-purple-500">
               Continue Shopping
             </button>
