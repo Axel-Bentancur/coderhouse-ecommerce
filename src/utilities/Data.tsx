@@ -16,7 +16,20 @@ export const Product_List: Array<IProducts> = [
     stock: 7,
     category: 'Plates',
     thumbnail: Plates,
-    colors:['White', 'Gray', 'Black'],
+      colors: {
+        options: [
+          { hex:'#D6D4CA',
+            name: 'gray'
+          },
+          { hex:'#95CBBE',
+            name: 'green'
+          },
+          { hex:'#FF9E72',
+            name: 'orange'
+          }
+        ],
+        chosenColor: undefined
+        },
     images: [
     "https://i.dummyjson.com/data/products/1/1.jpg",
     "https://i.dummyjson.com/data/products/1/2.jpg",
@@ -34,7 +47,17 @@ export const Product_List: Array<IProducts> = [
     stock: 1,
     category: 'Cups',
     thumbnail: D_cup,
-    colors:['White', 'Gray', 'Black'],
+      colors: {
+        options: [
+          { hex:'#fff',
+            name: 'white'
+          },
+          { hex:'#D6D4CA',
+            name: 'gray'
+          },
+        ],
+        chosenColor: undefined
+        },
     images: [
     "https://i.dummyjson.com/data/products/1/1.jpg",
     "https://i.dummyjson.com/data/products/1/2.jpg",
@@ -52,7 +75,17 @@ export const Product_List: Array<IProducts> = [
     stock: 15,
     category: 'Cups',
     thumbnail: Jar,
-    colors:['White', 'Gray', 'Black'],
+      colors: {
+        options: [
+          { hex:'#95CBBE',
+            name: 'green'
+          },
+          { hex:'#FF9E72',
+            name: 'orange'
+          }
+        ],
+        chosenColor: undefined
+        },
     images: [
     "https://i.dummyjson.com/data/products/1/1.jpg",
     "https://i.dummyjson.com/data/products/1/2.jpg",
@@ -70,7 +103,17 @@ export const Product_List: Array<IProducts> = [
     stock: 36,
     category: 'Cups',
     thumbnail: Pot,
-    colors:['White', 'Gray', 'Black'],
+      colors: {
+        options: [
+          { hex:'#FF9E72',
+            name: 'orange'
+          },
+          { hex:'#95CBBE',
+            name: 'green'
+          }
+        ],
+        chosenColor: undefined
+        },
     images: [
     "https://i.dummyjson.com/data/products/1/1.jpg",
     "https://i.dummyjson.com/data/products/1/2.jpg",
@@ -88,7 +131,17 @@ export const Product_List: Array<IProducts> = [
     stock: 3,
     category: 'Plates',
     thumbnail: A_plate,
-    colors:['White', 'Gray', 'Black'],
+      colors: {
+        options: [
+          { hex:'#fff',
+            name: 'white'
+          },
+          { hex:'#D6D4CA',
+            name: 'gray'
+          },
+        ],
+        chosenColor: undefined
+        },
     images: [
     "https://i.dummyjson.com/data/products/1/1.jpg",
     "https://i.dummyjson.com/data/products/1/2.jpg",
@@ -109,7 +162,20 @@ export const Cart_List: Array<IProductWithQuantity> = [
     stock: 7,
     category: 'Plates',
     thumbnail: Plates,
-    colors:['White', 'Gray', 'Black'],
+      colors: {
+        options: [
+          { hex:'#D6D4CA',
+            name: 'gray'
+          },
+          { hex:'#95CBBE',
+            name: 'green'
+          },
+          { hex:'#FF9E72',
+            name: 'orange'
+          }
+        ],
+        chosenColor: 'green'
+        },
     images: [
     "https://i.dummyjson.com/data/products/1/1.jpg",
     "https://i.dummyjson.com/data/products/1/2.jpg",
@@ -128,7 +194,17 @@ export const Cart_List: Array<IProductWithQuantity> = [
     stock: 1,
     category: 'Cups',
     thumbnail: D_cup,
-    colors:['White', 'Gray', 'Black'],
+      colors: {
+        options: [
+          { hex:'#fff',
+            name: 'white'
+          },
+          { hex:'#D6D4CA',
+            name: 'gray'
+          },
+        ],
+        chosenColor: 'white'
+        },
     images: [
     "https://i.dummyjson.com/data/products/1/1.jpg",
     "https://i.dummyjson.com/data/products/1/2.jpg",
@@ -147,7 +223,17 @@ export const Cart_List: Array<IProductWithQuantity> = [
     stock: 15,
     category: 'Cups',
     thumbnail: Jar,
-    colors:['White', 'Gray', 'Black'],
+      colors: {
+        options: [
+          { hex:'#95CBBE',
+            name: 'green'
+          },
+          { hex:'#FF9E72',
+            name: 'orange'
+          }
+        ],
+        chosenColor: 'orange'
+        },
     images: [
     "https://i.dummyjson.com/data/products/1/1.jpg",
     "https://i.dummyjson.com/data/products/1/2.jpg",
@@ -156,5 +242,5 @@ export const Cart_List: Array<IProductWithQuantity> = [
     "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
     ],
     quantity: 6,
-  }
+  },
 ]

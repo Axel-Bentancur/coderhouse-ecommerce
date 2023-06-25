@@ -3,12 +3,14 @@ import { IProductWithQuantity } from "../../interfaces/IProducts";
 //Others
 import { ToCurrency } from "../../utilities/Utilities";
 
-export default function ItemCardWidget({item, remove}: {item:IProductWithQuantity, remove:(productId: number) => void}): JSX.Element {
-  const {id, title, price, quantity, thumbnail, colors} = item;
+export default function ItemCardWidget({item, idx, remove}: {item:IProductWithQuantity, idx: number, remove:(productId: number) => void}): JSX.Element {
+  const {title, price, quantity, thumbnail, colors} = item;
+  
   const formatedPrice = ToCurrency(price, 'ARSPESO');
+  const formatedTotal = ToCurrency(price * quantity, 'ARSPESO');
 
   const handleRemoveFromCart = () => {
-    remove(id);
+    remove(idx);
   };
 
   return (
@@ -23,13 +25,14 @@ export default function ItemCardWidget({item, remove}: {item:IProductWithQuantit
             <h3>
               <a href="#">{title}</a>
             </h3>
-            <p className="ml-4">{formatedPrice}</p>
+            <p className="ml-4">{formatedTotal}</p>
           </div>
         </div>
         <div className="flex flex-1 items-end justify-between text-sm">
           <p className="text-gray-500 block">
-            <span className="block">Color: {colors}</span>
+            <span className="block">Color: {colors.chosenColor}</span>
             <span className="block">Quantity: {quantity}</span>
+            <span className="block">Price per unit: {formatedPrice}</span>
           </p>
           <div className="flex">
             <button onClick={handleRemoveFromCart} type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>

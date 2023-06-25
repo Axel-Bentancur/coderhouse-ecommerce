@@ -1,6 +1,6 @@
 import { useState } from "react";
 //Data
-import { tabsData } from '../utilities/staticData';
+import { tabsData } from '../../utilities/staticData';
 
 export function Tabs() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);

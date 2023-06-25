@@ -1,3 +1,13 @@
+export type ColorOptions = {
+  hex: string,
+  name: string,
+}
+
+type ProductColors = {
+  options: ColorOptions[],
+  chosenColor: string | undefined,
+}
+
 export type IProducts = {
   id: number,
   title: string,
@@ -7,7 +17,7 @@ export type IProducts = {
   stock: number,
   category: string,
   thumbnail: string,
-  colors: string[]
+  colors: ProductColors,
   images: string[]
 }
 

@@ -12,7 +12,6 @@ export const CartContext = createContext<CartContextType | undefined>(undefined)
 export const ProductProvider = ({children}:WithChildren) => {
 
   const [cart, setCart] = useState<IProductWithQuantity[]>([]);
-  console.log(cart)
 
   useEffect(() => {
     const cartData = localStorage.getItem('cart');
@@ -29,8 +28,12 @@ export const ProductProvider = ({children}:WithChildren) => {
     setCart((prevCart) => [...prevCart, product]);
   };
 
-  const removeFromCart = (productId: number) => {
-    setCart((prevCart) => prevCart.filter((product) => product.id !== productId));
+  const removeFromCart = (index: number) => {
+    setCart((prevCart) => {
+      const updatedCart = [...prevCart];
+      updatedCart.splice(index, 1);
+      return updatedCart;
+    });
   };
 
   const clearCart = () => {

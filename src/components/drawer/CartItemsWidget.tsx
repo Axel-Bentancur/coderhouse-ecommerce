@@ -25,7 +25,7 @@ export default function CartItemsWidget({ setIsOpen, element}: {setIsOpen: (el: 
         <div className="px-4">
           <ul role="list" className="divide-y divide-gray-200">
             {CartProduct?.cart.map((product, idx)=> (
-              <ItemCardWidget key={idx} item={product} remove={CartProduct.removeFromCart} />
+              <ItemCardWidget key={idx} item={product} idx={idx} remove={CartProduct.removeFromCart} />
             ))}
           </ul>
         </div>
