@@ -62,3 +62,32 @@ export function getProductByCategory(category: string | undefined, list: IProduc
     return list;
   }
 }
+
+export function disableButtonState(stock:number | undefined){
+  if(stock === 0){
+    return true;
+  }
+  return false;
+}
+
+export function checkstock(product: IProducts | undefined, cart: IProductWithQuantity[] | undefined){
+  if(product && cart){
+    const id = product.id;
+    const stock = product.stock;
+
+    const filteredProducts = cart.filter(item => item.id === id);
+    const totalQuantity = filteredProducts.reduce((total, objeto) => total + objeto.quantity, 0);
+    return stock - totalQuantity;
+  }
+}
+
+export function getLastPathSegment(location: string) {
+  const segments = location.split("/");
+  const lastSegment = segments[segments.length - 1];
+
+  if (lastSegment === "Shop") {
+    return null;
+  }
+
+  return lastSegment;
+}

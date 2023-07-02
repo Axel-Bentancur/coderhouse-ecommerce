@@ -5,13 +5,14 @@ import { CartContext } from '../../context/CartContext';
 //Types
 import { IProductWithQuantity, IProducts } from '../../interfaces/IProducts';
 //Others
-import { ToCurrency } from '../../utilities/Utilities';
+import { ToCurrency, disableButtonState } from '../../utilities/Utilities';
 
 export default function Card({item, lastElement}: {item:IProducts, lastElement:string | undefined}) {
-  const {title, price, category, thumbnail} = item;
+  const {title, price, category, thumbnail, stock} = item;
   const CartProduct = useContext(CartContext);
 
   const formatedPrice = ToCurrency(price, 'ARSPESO');
+  const disable = disableButtonState(stock);
 
   const handleAddToCart = () => {
     const product: IProductWithQuantity =
@@ -36,7 +37,7 @@ export default function Card({item, lastElement}: {item:IProducts, lastElement:s
             {title}
           </h2>
         </Link>
-        <button onClick={handleAddToCart} className='p-2 text-xl' title="Add to Cart">+</button>
+        <button onClick={handleAddToCart} className={`p-2 text-xl ${disable ? 'text-gray-400' : 'text-black'}`} title="Add to Cart" disabled={disable}>+</button>
       </div>
       <div className="flex flex-wrap mt-auto pt-3 text-xs border-b-2 border-gray-300">
         <p className="mb-2">{formatedPrice}</p>

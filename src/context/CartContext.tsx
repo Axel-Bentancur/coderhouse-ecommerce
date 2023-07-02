@@ -9,7 +9,7 @@ window.localStorage.setItem('cart', JSON.stringify(Cart_List));
 
 export const CartContext = createContext<CartContextType | undefined>(undefined);
 
-export const ProductProvider = ({children}:WithChildren) => {
+export const CartProvider = ({children}:WithChildren) => {
 
   const [cart, setCart] = useState<IProductWithQuantity[]>([]);
 

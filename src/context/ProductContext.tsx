@@ -1,16 +1,17 @@
 import { createContext } from "react";
+import useFetch from "../hooks/useFetch";
 //Types
 import { WithChildren } from "../interfaces/Icontainer";
-//Data
-import { Product_List } from "../utilities/Data";
+import { FetchContextType } from "../interfaces/IProducts";
 
-export const ProductContext = createContext(Product_List);
+export const ProductContext = createContext<FetchContextType>([[], false]);
 
-export const ProductProvider = ({children}:WithChildren) => {
+export const ProductProvider = ({ children }: WithChildren) => {
+  const fetchContextValue = useFetch();
 
   return (
-    <ProductContext.Provider value={ Product_List }>
+    <ProductContext.Provider value={fetchContextValue}>
       {children}
     </ProductContext.Provider>
-  )
-}
+  );
+};

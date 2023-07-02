@@ -44,7 +44,7 @@ export const Product_List: Array<IProducts> = [
     description: 'The ceramic plate is a beautiful piece of handcrafted art. It has a silky texture and features intricate floral designs in soft hues of blue and green. The plate is slightly curved, creating an elegant shape that adds dimension to any table setting. It is sturdy and durable, perfect for serving meals or displaying decorative items. The ceramic material allows for easy cleaning and makes it dishwasher and microwave safe. This plate is not only functional but also a stunning addition to any kitchen or dining room.',
     price: 45,
     rating: 4.69,
-    stock: 1,
+    stock: 6,
     category: 'Cups',
     thumbnail: D_cup,
       colors: {
@@ -72,7 +72,7 @@ export const Product_List: Array<IProducts> = [
     description: "The stoneware plate is a durable and versatile ceramic piece that is perfect for everyday use. Made from natural clay and fired at a high temperature, it is dense, strong, and chip-resistant, making it ideal for serving hot or cold food. Its earthy texture and subtle variations in tone give it a rustic yet elegant look that complements any table setting. The plate's glazed finish not only adds a protective layer but also enhances its natural beauty, making it a practical and stylish addition to your dinnerware collection.",
     price: 48,
     rating: 4.69,
-    stock: 15,
+    stock: 2,
     category: 'Cups',
     thumbnail: Jar,
       colors: {
@@ -100,7 +100,7 @@ export const Product_List: Array<IProducts> = [
     description: "The candy dish is a beautiful glass bowl with a wide opening. It sits on a sturdy pedestal giving it a graceful look. The dish is filled with an array of brightly colored candies, ranging from gummies to hard candies. The sweet smell of the candies wafts from the dish, tempting anyone nearby to take a sample. It's perfect for welcoming guests into your home or adding a touch of whimsy to any room.",
     price: 40,
     rating: 4.69,
-    stock: 36,
+    stock: 0,
     category: 'Cups',
     thumbnail: Pot,
       colors: {
@@ -241,6 +241,6 @@ export const Cart_List: Array<IProductWithQuantity> = [
     "https://i.dummyjson.com/data/products/1/4.jpg",
     "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
     ],
-    quantity: 6,
+    quantity: 1,
   },
 ]

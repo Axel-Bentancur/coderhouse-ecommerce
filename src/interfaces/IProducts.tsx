@@ -25,6 +25,10 @@ export type IProductWithQuantity = IProducts & {
   quantity: number;
 };
 
+export type FetchContextType = [
+  IProducts[], boolean
+];
+
 export type CartContextType = {
   cart: IProductWithQuantity[],
   addToCart: (product: IProductWithQuantity) => void,
