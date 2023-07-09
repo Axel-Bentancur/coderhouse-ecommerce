@@ -1,6 +1,6 @@
 import { ColorOptions } from '../../interfaces/IProducts';
 
-export default function ColorPicker({selectColor, choosenColor, colorOptions, } : {selectColor: (color:string) => void, choosenColor:string, colorOptions: ColorOptions[]}) {
+export default function ColorPicker({selectColor, choosenColor, colorOptions, } : {selectColor: (color:string) => void, choosenColor:string | undefined, colorOptions: ColorOptions[]}) {
 
   const handleColorChange = (color:string) => {
     selectColor(color);

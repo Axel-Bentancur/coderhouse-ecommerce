@@ -35,13 +35,16 @@ export default function CartItemsWidget({ setIsOpen, element}: {setIsOpen: (el: 
           <p>Subtotal</p>
           <p>{total}</p>
         </div>
-        <div className="mt-6">
-          <a href="#" className="flex items-center justify-center rounded-md border border-transparent bg-purple-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-purple-700">Checkout</a>
+        <div className="mt-6 flex justify-center text-center">
+          <Link to={'/Checkout'} className="w-full">
+            <button type="button" onClick={() => setIsOpen(element)} className="w-full rounded-md border bg-purple-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-purple-700">Checkout</button>
+          </Link>
         </div>
-        <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+
+        <div className="mt-6 flex justify-center text-center">
           <Link to={'/Shop'}>
             <button type="button" onClick={() => setIsOpen(element)} className="font-medium text-purple-600 hover:text-purple-500">
-              Continue Shopping
+              Go back to Product Section
             </button>
           </Link>
         </div>

@@ -1,8 +1,9 @@
 
-export default function Counter({stock, counter, increment, decrement}: {stock:number|undefined, counter:number, increment: () => void, decrement: () => void}) {
+export default function Counter({stock, counter, increment, decrement}: {stock:number | undefined, counter:number, increment: () => void, decrement: () => void}) {
 
   const minimum = counter <= 0;
-  const maximum = counter >= stock;
+  const maximum = stock !== undefined && counter >= stock;
+
 
   return (
     <div className="flex mb-8 flex-col">

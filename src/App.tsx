@@ -8,7 +8,7 @@ import About from "./pages/About";
 import ShopOnline from "./pages/ShopOnline";
 import Contacts from "./pages/Contacts";
 import Product from "./pages/Product";
-import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 import Breadcrumbs from "./components/breadcrumbs/Breadcrumbs";
 
 export default function App(): JSX.Element {
@@ -22,7 +22,7 @@ export default function App(): JSX.Element {
           <Route path='/Shop/:category' element={<ShopOnline />}/>
           <Route path='/About' element={<About />}/>
           <Route path='/Contact' element={<Contacts />}/>
-          <Route path='/Cart' element={<Cart />}/>
+          <Route path='/Checkout' element={<Checkout />}/>
           <Route path='/Shop/:category/:title' element={<Product />}/>
         </Routes>
       <Footer />

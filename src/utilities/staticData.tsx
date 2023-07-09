@@ -14,8 +14,8 @@ export const Nav_Links : Array<INavLinks> = [
     path: '/Contact',
   },
   {
-    title: 'Cart',
-    path: '/Cart',
+    title: 'Checkout',
+    path: '/Checkout',
   },
 ]
 

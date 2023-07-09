@@ -1,5 +1,4 @@
-import { useContext, useState } from 'react';
-import { ProductContext } from '../context/ProductContext';
+import { useContext, useEffect, useState } from 'react';
 //Components
 import Counter from '../components/Counter';
 import ColorSelect from '../components/product/ColorSelect';
@@ -8,56 +7,82 @@ import { Tabs } from '../components/product/Tabs';
 //Data
 import { CartContext } from '../context/CartContext';
 //Types
-import { IProductWithQuantity } from '../interfaces/IProducts';
+import { IProductWithQuantity, IProducts } from '../interfaces/IProducts';
 //Others
-import { checkstock, disableButtonState } from '../utilities/Utilities';
+import { checkstock, disableButtonState, getLastPathSegment } from '../utilities/Utilities';
 import useCounter from '../hooks/useCounter';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import db from '../firebase/config';
+import { useLocation } from 'react-router-dom';
 
 
 export default function Product(): JSX.Element {
-  const Data = useContext(ProductContext);
+  const productTitle = getLastPathSegment(useLocation().pathname);
+  const cleanTitle = productTitle && decodeURIComponent(productTitle)
+
+  const [fetchData, setFetchData] = useState<IProducts>();
+  const [counter, increment, decrement, reset] = useCounter();
+  const [selectedColor, setSelectedColor] = useState<string>('');
+
   const CartProduct = useContext(CartContext);
-
-  const product = Data[0][0];
-
-  const disable = disableButtonState(product?.stock);
-
-  const [state, setState] = useState(product);
-  const [counter, increment, decrement] = useCounter();
-  const [selectedColor, setSelectedColor] = useState('');
-
-  const quantityStock = checkstock(product, CartProduct?.cart);
+  const disable = disableButtonState(fetchData?.stock);
+  const quantityStock = checkstock(fetchData, CartProduct?.cart);
 
   const handleAddToCart = () => {
-    if(state){
+    if(fetchData){
       const product: IProductWithQuantity =
-      { ...state,
+      { ...fetchData,
         quantity: counter,
         colors: {
-          ...state.colors,
+          ...fetchData.colors,
           chosenColor: selectedColor,
         },
       }
       CartProduct?.addToCart(product);
     }
+    reset();
   };
+
+  useEffect(() => {
+    if (fetchData && fetchData.colors.options.length) {
+      setSelectedColor(fetchData.colors.options[0].name);
+    }
+  }, [fetchData]);
+
+  useEffect(() => {
+    const fetchDataFromFirestore = async () => {
+      const products = collection(db, 'products');
+      const product = query(products, where('title', '==', cleanTitle));
+
+      try {
+        const querySnapshot = await getDocs(product);
+        const product_list = querySnapshot.docs.map((doc) => doc.data()) as IProducts[];
+        setFetchData(product_list[0]);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchDataFromFirestore();
+  }, [productTitle]);
+
 
   return (
     <>
-    {product &&
+    {fetchData &&
       <div className='flex-grow bg-[#f5f5f4]'>
         <div className='flex flex-col lg:flex-row my-16'>
-          <ImageGallery product={product}/>
+          <ImageGallery product={fetchData}/>
           <div className='items-start justify-center p-8 lg:w-1/2 md:flex'>
             <div>
-              <h2 className='text-3xl font-bold noto mb-8'>{product.title}</h2>
-              <p className='noto mb-8 text-justify md:text-left'>{product.description}</p>
-              <p className='text-4xl noto mb-4'>${product.price}.00</p>
-              {product.stock < 3 && product.stock > 0 &&
-                <p className='noto mb-12 text-purple-500'>Only {product.stock} avaiable!</p>
+              <h2 className='text-3xl font-bold noto mb-8'>{fetchData.title}</h2>
+              <p className='noto mb-8 text-justify md:text-left'>{fetchData.description}</p>
+              <p className='text-4xl noto mb-4'>${fetchData.price}.00</p>
+              {fetchData.stock < 3 && fetchData.stock > 0 &&
+                <p className='noto mb-12 text-purple-500'>Only {fetchData.stock} avaiable!</p>
               }
               <div>
-                <ColorSelect selectColor={setSelectedColor} choosenColor={selectedColor} colorOptions={product.colors.options}/>
+                <ColorSelect selectColor={setSelectedColor} choosenColor={selectedColor} colorOptions={fetchData.colors.options}/>
                 <Counter stock={quantityStock} increment={increment} decrement={decrement} counter={counter}/>
               </div>
               <div className='flex justify-between md:block'>
