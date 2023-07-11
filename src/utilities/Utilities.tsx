@@ -1,4 +1,4 @@
-import { IProductWithQuantity, IProducts } from "../interfaces/IProducts";
+import { IProductSummary, IProductWithQuantity, IProducts } from "../interfaces/IProducts";
 
 export function CartItemsInIcon(quantity:number | undefined): string | null {
   if(quantity){
@@ -90,4 +90,26 @@ export function getLastPathSegment(location: string) {
   }
 
   return lastSegment;
+}
+
+export function cleanOrderSummary(ProductArr: IProductWithQuantity[] | undefined): IProductSummary[] {
+  const total: Record<string, IProductSummary> = {};
+  if(ProductArr) {
+    ProductArr.forEach(producto => {
+      const clave = `${producto.id}_${producto.colors.chosenColor}`;
+
+      if (total[clave]) {
+        total[clave].quantity += producto.quantity;
+      } else {
+        total[clave] = {
+          id: producto.id,
+          title: producto.title,
+          chosenColor: producto.colors.chosenColor,
+          quantity: producto.quantity
+        };
+      }
+    });
+  }
+
+  return Object.values(total);
 }

@@ -9,7 +9,7 @@ import { CartContext } from '../context/CartContext';
 //Types
 import { IProductWithQuantity, IProducts } from '../interfaces/IProducts';
 //Others
-import { checkstock, disableButtonState, getLastPathSegment } from '../utilities/Utilities';
+import { checkstock, getLastPathSegment } from '../utilities/Utilities';
 import useCounter from '../hooks/useCounter';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import db from '../firebase/config';
@@ -25,8 +25,8 @@ export default function Product(): JSX.Element {
   const [selectedColor, setSelectedColor] = useState<string>('');
 
   const CartProduct = useContext(CartContext);
-  const disable = disableButtonState(fetchData?.stock);
   const quantityStock = checkstock(fetchData, CartProduct?.cart);
+  const disable = quantityStock === 0 ? true : false;
 
   const handleAddToCart = () => {
     if(fetchData){
@@ -54,13 +54,16 @@ export default function Product(): JSX.Element {
       const products = collection(db, 'products');
       const product = query(products, where('title', '==', cleanTitle));
 
-      try {
-        const querySnapshot = await getDocs(product);
-        const product_list = querySnapshot.docs.map((doc) => doc.data()) as IProducts[];
-        setFetchData(product_list[0]);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
+    try {
+      const querySnapshot = await getDocs(product);
+      const product_list = querySnapshot.docs.map((doc) => {
+        const productData = doc.data();
+        return { ...productData, id: doc.id };
+      }) as IProducts[];
+      setFetchData(product_list[0]);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
     };
 
     fetchDataFromFirestore();

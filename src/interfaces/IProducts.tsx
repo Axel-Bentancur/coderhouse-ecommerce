@@ -9,7 +9,7 @@ type ProductColors = {
 }
 
 export type IProducts = {
-  id: number,
+  id: string,
   title: string,
   description: string,
   price: number,
@@ -24,6 +24,14 @@ export type IProducts = {
 export type IProductWithQuantity = IProducts & {
   quantity: number;
 };
+
+export type IProductSummary = {
+  id: string;
+  title: string;
+  chosenColor: string | undefined;
+  quantity: number;
+}
+
 
 export type CartContextType = {
   cart: IProductWithQuantity[],

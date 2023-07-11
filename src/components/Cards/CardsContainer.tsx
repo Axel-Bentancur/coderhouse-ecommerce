@@ -29,7 +29,10 @@ export default function CardsContainer() {
 
       try {
         const querySnapshot = await getDocs(product);
-        const product_list = querySnapshot.docs.map((doc) => doc.data()) as IProducts[];
+        const product_list = querySnapshot.docs.map((doc) => {
+          const productData = doc.data();
+          return { ...productData, id: doc.id };
+        }) as IProducts[];
         setFetchData(product_list);
       } catch (error) {
         console.error("Error fetching products:", error);

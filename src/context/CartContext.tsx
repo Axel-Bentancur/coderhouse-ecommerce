@@ -2,10 +2,6 @@ import { createContext, useState, useEffect } from "react";
 //Types
 import { WithChildren } from "../interfaces/Icontainer";
 import { IProductWithQuantity, CartContextType } from "../interfaces/IProducts";
-//Data
-import { Cart_List } from "../utilities/Data";
-
-window.localStorage.setItem('cart', JSON.stringify(Cart_List));
 
 export const CartContext = createContext<CartContextType | undefined>(undefined);
 
