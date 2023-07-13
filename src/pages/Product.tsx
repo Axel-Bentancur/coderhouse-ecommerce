@@ -5,6 +5,7 @@ import Counter from '../components/Counter';
 import ColorSelect from '../components/product/ColorSelect';
 import ImageGallery from '../components/product/ImageGallery';
 import { Tabs } from '../components/product/Tabs';
+import Rating from '../components/Rating';
 //Types
 import { IProductWithQuantity, IProducts } from '../interfaces/IProducts';
 //Context
@@ -70,7 +71,6 @@ export default function Product(): JSX.Element {
     fetchDataFromFirestore();
   }, [productTitle]);
 
-
   return (
     <>
     {fetchData &&
@@ -82,6 +82,7 @@ export default function Product(): JSX.Element {
               <h2 className='text-3xl font-bold noto mb-8'>{fetchData.title}</h2>
               <p className='noto mb-8 text-justify md:text-left'>{fetchData.description}</p>
               <p className='text-4xl noto mb-4'>${fetchData.price}.00</p>
+              <Rating score={fetchData?.rating} />
               {fetchData.stock < 3 && fetchData.stock > 0 &&
                 <p className='noto mb-12 text-purple-500'>Only {fetchData.stock} avaiable!</p>
               }

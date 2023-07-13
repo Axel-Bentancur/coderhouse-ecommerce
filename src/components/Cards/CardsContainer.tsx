@@ -25,7 +25,7 @@ export default function CardsContainer() {
       const product =
         categoryId === null
           ? products
-          : query(products, where('category', '==', categoryId));
+          : query(products, where('category', '==', 'Plates'));
 
       try {
         const querySnapshot = await getDocs(product);

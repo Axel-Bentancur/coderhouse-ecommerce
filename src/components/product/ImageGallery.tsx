@@ -11,7 +11,7 @@ export default function ImageGallery({ product }: { product: IProducts }): JSX.E
 
   return (
     <div className="items-start justify-center p-8 lg:w-1/2 md:flex">
-      <div className="flex flex-col items-center justify-between h-[60vh] gap-2">
+      <div className="flex flex-col items-center justify-between h-[65vh] gap-2">
         <div className="flex-shrink-0">
           <img
             className="object-contain max-h-[calc(60vh-4rem)]"
