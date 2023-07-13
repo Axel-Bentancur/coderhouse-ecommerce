@@ -1,9 +1,12 @@
 import { useState, useContext } from "react";
+//Components
 import CheckoutForm from "../components/Form/CheckoutForm";
 import CheckoutCartItems from "../components/drawer/CheckoutCartItems";
-import { CartContext } from "../context/CartContext";
-import { Subtotal } from "../utilities/Utilities";
 import SuccessfulOrder from "../components/Form/SuccessfulOrder";
+//Context
+import { CartContext } from "../context/CartContext";
+//Others
+import { Subtotal } from "../utilities/Utilities";
 
 export default function Checkout() {
   const [orderId, setOrderId] = useState<string | null>(null);

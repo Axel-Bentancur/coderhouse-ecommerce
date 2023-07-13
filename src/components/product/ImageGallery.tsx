@@ -1,4 +1,5 @@
 import { useState } from "react";
+//Types
 import { IProducts } from "../../interfaces/IProducts";
 
 export default function ImageGallery({ product }: { product: IProducts }): JSX.Element {

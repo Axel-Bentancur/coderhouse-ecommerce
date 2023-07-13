@@ -1,13 +1,13 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
 //Components
 import ItemCardWidget from "./ItemCardWidget";
 import NavbarContainer from "../navbar/NavbarContainer";
 import CloseButton from "../buttons/CloseButton";
-//Data
-import { CartContext } from "../../context/CartContext";
 //Types
 import { ITargetWidget } from "../../interfaces/ITargetWidget";
+//Context
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 //Others
 import { Subtotal } from "../../utilities/Utilities";
 import emptyCartImage from '../../assets/bag-404.svg';

@@ -1,18 +1,24 @@
-import { addDoc, collection, documentId, query, where, writeBatch, getDocs } from 'firebase/firestore';
+//Types
 import { IProductWithQuantity } from '../../interfaces/IProducts';
+//Context
+import { useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
+//Data
+import { addDoc, collection, documentId, query, where, writeBatch, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase/config';
+//Others
+import { cleanOrderSummary } from '../../utilities/Utilities';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import db from '../../firebase/config';
-import { cleanOrderSummary } from '../../utilities/Utilities';
 
 function CheckoutForm({productList, clean, total, setOrder}:{productList:IProductWithQuantity[] | undefined, clean: (()=> void) | undefined, total:string, setOrder: (id:string)=> void}) {
   const orderSummary = cleanOrderSummary(productList);
-
+  const auth = useContext(AuthContext)
   const formik = useFormik({
     initialValues: {
       Name: '',
       Addres: '',
-      Email: '',
+      Email: auth && auth.user.email,
     },
     validationSchema: Yup.object({
       Name: Yup.string()

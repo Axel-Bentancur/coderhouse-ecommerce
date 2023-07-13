@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
+//Others
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandsClapping } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
 
 export default function SuccessfulOrder({ id }: { id: string | null }) {
   return (

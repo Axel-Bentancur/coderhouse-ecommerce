@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 //Components
 import IconsButton from '../buttons/IconsButton';
 //Types
@@ -6,7 +7,6 @@ import { ITargetWidget } from '../../interfaces/ITargetWidget';
 import { CartItemsInIcon } from '../../utilities/Utilities';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
-import { useLocation } from 'react-router-dom';
 
 export default function CartWidget({ quantity, setIsOpen }: { quantity: number | undefined; setIsOpen: (el: ITargetWidget) => void }) {
   const items = CartItemsInIcon(quantity);

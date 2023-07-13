@@ -1,3 +1,4 @@
+//Others
 import notFoundImage from '../../assets/bag-404.svg';
 
 const NoProductsFound = () => {

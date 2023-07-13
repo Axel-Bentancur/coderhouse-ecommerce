@@ -1,21 +1,24 @@
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
 //Components
 import NavbarContainer from './NavbarContainer';
 import BurguerButton from './BurguerButton';
 import Drawer from '../drawer/Drawer';
 import CartWidget from './CartWidget';
-//Data
-import { CartContext } from '../../context/CartContext';
-//Others
-import useDrawer from '../../hooks/useDrawer';
-import { Nav_Links } from "../../utilities/staticData";
 import Logo from '../Logo';
+import UserIcon from './UserIcon';
+//Context
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
+import { AuthContext } from '../../context/AuthContext';
+//Others
+import { Nav_Links } from "../../utilities/staticData";
+import useDrawer from '../../hooks/useDrawer';
 import './NavBar.scss';
 
 export default function NavBar ():JSX.Element {
   const [toggle, element, setDrawer] = useDrawer();
   const quantity = useContext(CartContext)?.cart.length;
+  const user = useContext(AuthContext);
 
   return (
     <header className='px-0'>
@@ -30,6 +33,9 @@ export default function NavBar ():JSX.Element {
             </Link>
           ))}
           <CartWidget quantity={quantity} setIsOpen={setDrawer}/>
+          {user && user?.user.logged &&
+            <UserIcon setIsOpen={setDrawer}/>
+          }
           <BurguerButton isOpen={toggle} setIsOpen={setDrawer}/>
         </div>
       </NavbarContainer>

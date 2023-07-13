@@ -1,8 +1,10 @@
-import { CartContextType } from '../../interfaces/IProducts';
+//Components
 import ItemCardWidget from './ItemCardWidget';
+//Types
+import { CartContextType } from '../../interfaces/IProducts';
 
 function CheckoutCartItems({productList, total}:{productList:CartContextType | undefined, total:string}) {
-  console.log(productList?.cart)
+
   return (
     <section aria-labelledby="summary-heading" className="w-full lg:w-1/2 bg-[#faf5ff] p-6 shadow-sm lg:order-2">
     <div className="mb-6">

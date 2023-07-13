@@ -1,19 +1,20 @@
 import { useContext, useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 //Components
 import Counter from '../components/Counter';
 import ColorSelect from '../components/product/ColorSelect';
 import ImageGallery from '../components/product/ImageGallery';
 import { Tabs } from '../components/product/Tabs';
-//Data
-import { CartContext } from '../context/CartContext';
 //Types
 import { IProductWithQuantity, IProducts } from '../interfaces/IProducts';
+//Context
+import { CartContext } from '../context/CartContext';
+//Data
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../firebase/config';
 //Others
 import { checkstock, getLastPathSegment } from '../utilities/Utilities';
 import useCounter from '../hooks/useCounter';
-import { collection, getDocs, query, where } from 'firebase/firestore';
-import db from '../firebase/config';
-import { useLocation } from 'react-router-dom';
 
 
 export default function Product(): JSX.Element {

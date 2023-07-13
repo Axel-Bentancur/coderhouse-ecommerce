@@ -2,13 +2,23 @@ import { Link } from "react-router-dom";
 //Components
 import NavbarContainer from "../navbar/NavbarContainer";
 import CloseButton from "../buttons/CloseButton";
-//Data
-import { Nav_Links } from "../../utilities/staticData";
 //Types
 import { ITargetWidget } from "../../interfaces/ITargetWidget";
+//Context
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
+//Data
+import { Nav_Links } from "../../utilities/staticData";
 
 
 export default function NavList({ setIsOpen, element}: { setIsOpen: (el: ITargetWidget) => void; element: ITargetWidget}): JSX.Element {
+  const user = useContext(AuthContext);
+
+  const handleLogout = () => {
+    if(user){
+      user?.logout();
+    }
+  }
 
   return (
     <>
@@ -23,6 +33,9 @@ export default function NavList({ setIsOpen, element}: { setIsOpen: (el: ITarget
             </span>
           </Link>
         ))}
+        { user && user.user.logged &&
+          <button type="button" onClick={handleLogout} className="w-full rounded-md border bg-purple-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-purple-700">Logout</button>
+        }
       </div>
     </>
   )

@@ -5,11 +5,11 @@ import Card from "./Card";
 import Loader from "../product/Loader";
 import CardCategory from "./CardCategory";
 import NoProductsFound from "../product/NoProducts";
-// Interfaces
+// Types
 import { IProducts } from "../../interfaces/IProducts";
 // Data
 import { collection, getDocs, query, where } from "firebase/firestore";
-import db from "../../firebase/config";
+import { db } from "../../firebase/config";
 // Others
 import { getLastPathSegment } from "../../utilities/Utilities";
 

@@ -39,3 +39,15 @@ export type CartContextType = {
   removeFromCart: (productId: number) => void,
   clearCart: () => void,
 };
+
+export type IUser = {
+  email: string | null;
+  logged: boolean;
+};
+
+export type AuthContextType = {
+  user: IUser,
+  login: (values: {email: string, password: string}) => void,
+  register: (values: {email: string, password: string}) => void,
+  logout: () => void,
+};

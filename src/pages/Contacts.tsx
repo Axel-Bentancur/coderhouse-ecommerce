@@ -1,4 +1,4 @@
-
+//Others
 import ContactImage from "../assets/contact.png";
 
 export default function Contacts(): JSX.Element {
