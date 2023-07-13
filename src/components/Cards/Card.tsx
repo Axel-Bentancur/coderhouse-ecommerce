@@ -7,7 +7,6 @@ import { ToCurrency } from '../../utilities/Utilities';
 
 export default function Card({item, lastElement}: {item:IProducts, lastElement:string | null}) {
   const {title, price, category, thumbnail} = item;
-  console.log(item, 'product')
   const formatedPrice = ToCurrency(price, 'ARSPESO');
 
   return (

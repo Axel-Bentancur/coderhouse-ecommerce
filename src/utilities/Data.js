@@ -6,7 +6,7 @@ export const Product_List = [
     rating: 4.7,
     stock: 20,
     category: 'Cups',
-    thumbnail: 'src/assets/cups/cup_lightblue.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_lightblue.png?alt=media&token=5199ecda-99a5-463e-b543-397c96ac6453',
       colors: {
         options: [
           { hex:'#fff',
@@ -23,7 +23,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/cups/cup_lightblue.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_lightblue.png?alt=media&token=5199ecda-99a5-463e-b543-397c96ac6453"
     ]
   },
   {
@@ -33,7 +33,7 @@ export const Product_List = [
     rating: 4.3,
     stock: 20,
     category: 'Cups',
-    thumbnail: 'src/assets/cups/cup_oldery.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_oldery.png?alt=media&token=66b3210b-4473-43a4-80d6-cd0b3333c1c7',
       colors: {
         options: [
           { hex:'#fff',
@@ -50,7 +50,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/cups/cup_oldery.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_oldery.png?alt=media&token=66b3210b-4473-43a4-80d6-cd0b3333c1c7"
     ]
   },
   {
@@ -60,7 +60,7 @@ export const Product_List = [
     rating: 4.2,
     stock: 20,
     category: 'Cups',
-    thumbnail: 'src/assets/cups/cup_tea_oldery.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_tea_oldery.png?alt=media&token=7f2f3f04-8eda-45f0-8dea-b69bf618482a',
       colors: {
         options: [
           { hex:'#fff',
@@ -77,7 +77,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/cups/cup_tea_oldery.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_tea_oldery.png?alt=media&token=7f2f3f04-8eda-45f0-8dea-b69bf618482a"
     ]
   },
   {
@@ -87,7 +87,7 @@ export const Product_List = [
     rating: 5,
     stock: 20,
     category: 'Cups',
-    thumbnail: 'src/assets/cups/cup_white.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_white.png?alt=media&token=13e12aec-f0ef-4d64-ab9b-cf667c70ac3e',
       colors: {
         options: [
           { hex:'#fff',
@@ -104,7 +104,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/cups/cup_white.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_white.png?alt=media&token=13e12aec-f0ef-4d64-ab9b-cf667c70ac3e"
     ]
   },
   {
@@ -114,7 +114,7 @@ export const Product_List = [
     rating: 4.2,
     stock: 20,
     category: 'Cups',
-    thumbnail: 'src/assets/cups/cup_irisblue.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_irisblue.png?alt=media&token=659bbff6-9e23-41d2-b317-738cecaafa17',
       colors: {
         options: [
           { hex:'#fff',
@@ -131,7 +131,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/cups/cup_irisblue.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_irisblue.png?alt=media&token=659bbff6-9e23-41d2-b317-738cecaafa17"
     ]
   },
   {
@@ -141,7 +141,7 @@ export const Product_List = [
     rating: 5,
     stock: 20,
     category: 'Cups',
-    thumbnail: 'src/assets/cups/cup_big_oldery.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_big_oldery.png?alt=media&token=008b7d0c-042d-4060-bf32-f978dfca662b',
       colors: {
         options: [
           { hex:'#fff',
@@ -158,7 +158,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/cups/cup_big_oldery.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_big_oldery.png?alt=media&token=008b7d0c-042d-4060-bf32-f978dfca662b"
     ]
   },
   {
@@ -168,7 +168,7 @@ export const Product_List = [
     rating: 4.69,
     stock: 0,
     category: 'Cups',
-    thumbnail: 'src/assets/cups/cup_candy.jpg',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_candy.jpg?alt=media&token=c0f8954a-7d3d-496c-b770-e3e94fabfaca',
       colors: {
         options: [
           { hex:'#FF9E72',
@@ -185,7 +185,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/cups/cup_candy.jpg"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_candy.jpg?alt=media&token=c0f8954a-7d3d-496c-b770-e3e94fabfaca"
     ]
   },
   {
@@ -195,7 +195,7 @@ export const Product_List = [
     rating: 4.69,
     stock: 6,
     category: 'Cups',
-    thumbnail: 'src/assets/cups/cup_d_serving.jpg',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_d_serving.jpg?alt=media&token=5284567f-addf-40ed-b6b2-1fba1ad0917d',
       colors: {
         options: [
           { hex:'#fff',
@@ -212,7 +212,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/cups/cup_d_serving.jpg"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/cup_d_serving.jpg?alt=media&token=5284567f-addf-40ed-b6b2-1fba1ad0917d"
     ]
   },
   {
@@ -222,7 +222,7 @@ export const Product_List = [
     rating: 4.69,
     stock: 20,
     category: 'Plates',
-    thumbnail: 'src/assets/plates/plate_pottery.jpg',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/plate_pottery.jpg?alt=media&token=26a5731d-261e-4295-8eca-bd9c45870bcc',
       colors: {
         options: [
           { hex:'#D6D4CA',
@@ -242,7 +242,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/plates/plate_pottery.jpg"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/plate_pottery.jpg?alt=media&token=26a5731d-261e-4295-8eca-bd9c45870bcc"
     ]
   },
   {
@@ -252,7 +252,7 @@ export const Product_List = [
     rating: 4.69,
     stock: 20,
     category: 'Plates',
-    thumbnail: 'src/assets/plates/plate_apple.jpg',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/plate_apple.jpg?alt=media&token=82722cd4-e609-4749-8896-41433436d9f7',
       colors: {
         options: [
           { hex:'#fff',
@@ -269,7 +269,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/plates/plate_apple.jpg"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/plate_apple.jpg?alt=media&token=82722cd4-e609-4749-8896-41433436d9f7"
     ]
   },
   {
@@ -279,7 +279,7 @@ export const Product_List = [
     rating: 4.7,
     stock: 20,
     category: 'Plates',
-    thumbnail: 'src/assets/plates/plate_orldery.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/plate_orldery.png?alt=media&token=40a769fc-7607-4b0e-b7fe-f7d04952bcbc',
       colors: {
         options: [
           { hex:'#fff',
@@ -296,7 +296,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/plates/plate_orldery.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/plate_orldery.png?alt=media&token=40a769fc-7607-4b0e-b7fe-f7d04952bcbc"
     ]
   },
   {
@@ -306,7 +306,7 @@ export const Product_List = [
     rating: 4.2,
     stock: 20,
     category: 'Plates',
-    thumbnail: 'src/assets/plates/plate_bluesea.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/plate_bluesea.png?alt=media&token=c77431db-a77a-48ae-9847-862788fece4e',
       colors: {
         options: [
           { hex:'#fff',
@@ -323,7 +323,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/plates/plate_bluesea.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/plate_bluesea.png?alt=media&token=c77431db-a77a-48ae-9847-862788fece4e"
     ]
   },
   {
@@ -333,7 +333,7 @@ export const Product_List = [
     rating: 4.9,
     stock: 20,
     category: 'Plates',
-    thumbnail: 'src/assets/plates/plate_rosalli.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/plate_rosalli.png?alt=media&token=77963e2d-2297-4f61-b078-fc045263aeaa',
       colors: {
         options: [
           { hex:'#fff',
@@ -350,7 +350,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/plates/plate_rosalli.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/plate_rosalli.png?alt=media&token=77963e2d-2297-4f61-b078-fc045263aeaa"
     ]
   },
   {
@@ -360,7 +360,7 @@ export const Product_List = [
     rating: 3.9,
     stock: 20,
     category: 'Plates',
-    thumbnail: 'src/assets/plates/plate_sky.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/plate_sky.png?alt=media&token=f563860e-cc59-4eb2-83a5-2635ad34d58d',
       colors: {
         options: [
           { hex:'#fff',
@@ -377,7 +377,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/plates/plate_sky.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/plate_sky.png?alt=media&token=f563860e-cc59-4eb2-83a5-2635ad34d58d"
     ]
   },
   {
@@ -387,7 +387,7 @@ export const Product_List = [
     rating: 4.69,
     stock: 2,
     category: 'Jars',
-    thumbnail: 'src/assets/jar/jar_stoneware.jpg',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/jar_stoneware.jpg?alt=media&token=87e6d810-d871-4167-ac32-780e91033714',
       colors: {
         options: [
           { hex:'#95CBBE',
@@ -404,7 +404,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/jar/jar_stoneware.jpg"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/jar_stoneware.jpg?alt=media&token=87e6d810-d871-4167-ac32-780e91033714"
     ]
   },
   {
@@ -414,7 +414,7 @@ export const Product_List = [
     rating: 4.4,
     stock: 20,
     category: 'Jars',
-    thumbnail: 'src/assets/jar/jar_acquamarine.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/jar_acquamarine.png?alt=media&token=9d2d91b5-1c56-46d0-92f1-e99fdad473ad',
       colors: {
         options: [
           { hex:'#95CBBE',
@@ -431,7 +431,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/jar/jar_acquamarine.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/jar_acquamarine.png?alt=media&token=9d2d91b5-1c56-46d0-92f1-e99fdad473ad"
     ]
   },
   {
@@ -441,7 +441,7 @@ export const Product_List = [
     rating: 5,
     stock: 20,
     category: 'Jars',
-    thumbnail: 'src/assets/jar/jar_big_oldery.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/jar_big_oldery.png?alt=media&token=9fef1721-8ba0-4511-8d61-25b1f1cb1d99',
       colors: {
         options: [
           { hex:'#95CBBE',
@@ -458,7 +458,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/jar/jar_big_oldery.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/jar_big_oldery.png?alt=media&token=9fef1721-8ba0-4511-8d61-25b1f1cb1d99"
     ]
   },
   {
@@ -468,7 +468,7 @@ export const Product_List = [
     rating: 4.7,
     stock: 20,
     category: 'Jars',
-    thumbnail: 'src/assets/jar/jar_charcoal.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/jar_charcoal.png?alt=media&token=78985c2c-9d4f-4d01-b7e8-d67a26e33c00',
       colors: {
         options: [
           { hex:'#95CBBE',
@@ -485,7 +485,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/jar/jar_charcoal.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/jar_charcoal.png?alt=media&token=78985c2c-9d4f-4d01-b7e8-d67a26e33c00"
     ]
   },
   {
@@ -495,7 +495,7 @@ export const Product_List = [
     rating: 4.8,
     stock: 20,
     category: 'Jars',
-    thumbnail: 'src/assets/jar/jar_deepblue.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/jar_deepblue.png?alt=media&token=253240d6-eef5-4cb6-a534-dc48d711284f',
       colors: {
         options: [
           { hex:'#95CBBE',
@@ -512,7 +512,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/jar/jar_deepblue.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/jar_deepblue.png?alt=media&token=253240d6-eef5-4cb6-a534-dc48d711284f"
     ]
   },
   {
@@ -522,7 +522,7 @@ export const Product_List = [
     rating: 4.3,
     stock: 20,
     category: 'Jars',
-    thumbnail: 'src/assets/jar/jar_oldery.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/jar_oldery.png?alt=media&token=aa16da78-062d-4218-998b-135ae4bb511b',
       colors: {
         options: [
           { hex:'#95CBBE',
@@ -539,7 +539,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/jar/jar_oldery.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/jar_oldery.png?alt=media&token=aa16da78-062d-4218-998b-135ae4bb511b"
     ]
   },
   {
@@ -549,7 +549,7 @@ export const Product_List = [
     rating: 5,
     stock: 20,
     category: 'Jars',
-    thumbnail: 'src/assets/jar/jar_pot.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/jar_pot.png?alt=media&token=0bf1e497-ac95-4d96-afa9-7dcb035d7762',
       colors: {
         options: [
           { hex:'#95CBBE',
@@ -566,7 +566,7 @@ export const Product_List = [
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=2",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=3",
     "https://dummyimage.com/600x750/d9d9d9/787878.jpg&text=4",
-    "src/assets/jar/jar_pot.png"
+    "https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-a79b2.appspot.com/o/jar_pot.png?alt=media&token=0bf1e497-ac95-4d96-afa9-7dcb035d7762"
     ]
   },
 ]
